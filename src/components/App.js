@@ -24,7 +24,9 @@ export default function App() {
   }, [contacts]);
 
   function formSumbitHandler(name, number) {
-    const addingExistingName = contacts.some(contact => contact.name === name);
+    const addingExistingName = contacts.some(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
 
     if (addingExistingName) {
       alert(`${name} is already in contacts`);

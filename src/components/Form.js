@@ -63,5 +63,5 @@ export default function Form({ submitHandler }) {
 }
 
 Form.propTypes = {
-  submitHandler: PropTypes.func,
+  submitHandler: PropTypes.func.isRequired,
 };
